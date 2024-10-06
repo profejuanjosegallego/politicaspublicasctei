@@ -1,0 +1,83 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .timeline-item {
+    padding: 10px 20px;
+    position: relative;
+    background-color: inherit;
+    width: 50%; /* Mantener el ancho en 50% */
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0; /* Los pares ahora se alinean a la izquierda */
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 50%; /* Los impares ahora se alinean a la derecha */
+  }
+  
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 4px solid #007bff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(even)::after {
+    right: -17px; /* Para los pares, el punto debe aparecer a la derecha */
+    
+  }
+  
+  .timeline-item:nth-child(odd)::after {
+    left: -17px; /* Para los impares, el punto debe aparecer a la izquierda */
+    right: auto;
+  }
+  
+  .timeline-content {
+    padding: 15px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  .timeline-year {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .timeline-content p {
+    margin: 0;
+  }
+  
+  .banner{
+    background-image: url("./img/produccion.png");
+    padding: 25%;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+  }
